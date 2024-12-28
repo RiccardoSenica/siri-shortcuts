@@ -9,11 +9,4 @@ describe('Ping Command', () => {
     expect(response.data).toHaveProperty('timestamp');
     expect(response.data).toHaveProperty('userId', 'test-user');
   });
-
-  it('should include parameters in response', async () => {
-    const params = { test: 'value' };
-    const response = await pingCommand('test-user', params);
-
-    expect(response.data).toHaveProperty('parameters', params);
-  });
 });

@@ -1,6 +1,7 @@
 import { ShortcutsResponse } from './types';
 import { pingCommand } from './commands/ping';
 import { timeCommand } from './commands/time';
+import { anthropicCommand } from './commands/anthropic';
 
 type CommandHandler = (
   userId: string,
@@ -18,6 +19,7 @@ export class CommandRegistry {
   private registerDefaultCommands() {
     this.register('ping', pingCommand);
     this.register('time', timeCommand);
+    this.register('anthropic', anthropicCommand);
   }
 
   register(command: string, handler: CommandHandler) {
