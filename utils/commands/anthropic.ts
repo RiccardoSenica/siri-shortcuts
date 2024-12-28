@@ -14,7 +14,9 @@ export async function anthropicCommand(
     }
 
     const response = await getMessage(
-      'I want to know ' + parameters['question']
+      'I want to know ' +
+        parameters['question'] +
+        '. Structure the response in a manner suitable for spoken communication.'
     );
 
     return {
