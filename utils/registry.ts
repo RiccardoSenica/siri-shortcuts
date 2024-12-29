@@ -4,7 +4,6 @@ import { timeCommand } from './commands/time';
 import { anthropicCommand } from './commands/anthropic';
 
 type CommandHandler = (
-  userId: string,
   parameters?: Record<string, string>
 ) => Promise<ShortcutsResponse>;
 

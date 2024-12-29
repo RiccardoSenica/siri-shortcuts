@@ -33,7 +33,6 @@ export async function POST(req: Request) {
 
     const response = await shortcutsHandler.processCommand(
       result.data.command,
-      result.data.userId,
       result.data.parameters
     );
 

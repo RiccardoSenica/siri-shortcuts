@@ -1,12 +1,11 @@
 import { ShortcutsResponse } from '../types';
 
-export async function pingCommand(userId: string): Promise<ShortcutsResponse> {
+export async function pingCommand(): Promise<ShortcutsResponse> {
   return {
     success: true,
     message: 'The system is operational.',
     data: {
-      timestamp: new Date().toISOString(),
-      userId
+      timestamp: new Date().toISOString()
     }
   };
 }

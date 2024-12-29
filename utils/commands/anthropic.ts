@@ -2,7 +2,6 @@ import { getMessage } from '@utils/anthropicClient';
 import { ShortcutsResponse } from '../types';
 
 export async function anthropicCommand(
-  userId: string,
   parameters: Record<string, string> | undefined
 ): Promise<ShortcutsResponse> {
   try {

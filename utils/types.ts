@@ -3,7 +3,6 @@ import { z } from 'zod';
 export const RequestSchema = z.object({
   command: z.string(),
   parameters: z.record(z.string()).optional(),
-  userId: z.string(),
   apiKey: z.string()
 });
 

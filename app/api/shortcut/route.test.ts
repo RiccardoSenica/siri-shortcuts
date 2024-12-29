@@ -20,7 +20,6 @@ describe('Shortcuts API Route', () => {
       },
       body: JSON.stringify({
         command: 'ping',
-        userId: 'test-user',
         apiKey: 'test-key-123'
       })
     });
@@ -41,7 +40,6 @@ describe('Shortcuts API Route', () => {
       },
       body: JSON.stringify({
         command: 'ping',
-        userId: 'test-user',
         apiKey: 'wrong-key'
       })
     });

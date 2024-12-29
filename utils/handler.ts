@@ -21,7 +21,6 @@ export class ShortcutsHandler {
 
   async processCommand(
     command: string,
-    userId: string,
     parameters?: Record<string, string>
   ): Promise<ShortcutsResponse> {
     const handler = this.registry.getCommand(command);
@@ -34,7 +33,7 @@ export class ShortcutsHandler {
     }
 
     try {
-      return await handler(userId, parameters);
+      return await handler(parameters);
     } catch (error) {
       console.error(`Error processing command ${command}:`, error);
       return {
