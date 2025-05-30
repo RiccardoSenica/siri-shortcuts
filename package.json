@@ -1,4 +1,8 @@
 {
+  "name": "siri-shortcuts",
+  "version": "1.0.0",
+  "description": "Siri-enabled, Anthropic-powered shortcuts",
+  "author": "riccardo@frompixels.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
