@@ -5,7 +5,7 @@
   "author": "riccardo@frompixels.com",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix && prettier --config .prettierrc '**/*.{js,jsx,ts,tsx,json,css,scss,md}' --write",
