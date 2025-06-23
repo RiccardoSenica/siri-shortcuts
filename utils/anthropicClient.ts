@@ -1,6 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk';
 
-export async function getMessage(text: string) {
+interface AnthropicResponse {
+  text: string;
+  tokensUsed: number;
+}
+
+export async function getMessage(text: string): Promise<AnthropicResponse> {
   const anthropic = new Anthropic({
     apiKey: process.env.ANTHROPIC_API_KEY
   });
@@ -18,7 +23,20 @@ export async function getMessage(text: string) {
   try {
     const data = response.content as [{ type: string; text: string }];
 
-    return data[0].text;
+    const tokensUsed =
+      (response.usage?.input_tokens || 0) +
+      (response.usage?.output_tokens || 0);
+
+    console.info('Token usage:', {
+      input_tokens: response.usage?.input_tokens,
+      output_tokens: response.usage?.output_tokens,
+      total: tokensUsed
+    });
+
+    return {
+      text: data[0].text,
+      tokensUsed
+    };
   } catch (error) {
     throw new Error(`Anthropic client error: ${JSON.stringify(error)}.`);
   }
