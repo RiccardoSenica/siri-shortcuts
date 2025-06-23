@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AnthropicQuery {
+  id          String   @id @default(cuid())
+  question    String   @db.Text
+  response    String   @db.Text
+  success     Boolean
+  errorMessage String? @db.Text
+  tokensUsed     Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("anthropic_queries")
+  @@index([createdAt])
+  @@index([success])
+}
