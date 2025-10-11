@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const RequestSchema = z.object({
   command: z.string(),
-  parameters: z.record(z.string()).optional(),
+  parameters: z.record(z.string(), z.string()).optional(),
   apiKey: z.string()
 });
 

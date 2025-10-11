@@ -12,7 +12,7 @@ A versatile backend service that extends Siri's capabilities through custom shor
 
 - **Framework**: Next.js 15
 - **Language**: TypeScript
-- **AI Integration**: Anthropic's Claude API
+- **AI Integration**: Anthropic API via Vercel AI Gateway
 - **Testing**: Jest
 - **Deployment**: Vercel
 - **Code Quality**: ESLint, Prettier, Husky
@@ -32,9 +32,7 @@ A versatile backend service that extends Siri's capabilities through custom shor
    ```
 
    Fill in:
-
    - `USER_KEY`: Your API authentication key
-   - `ANTHROPIC_API_KEY`: Your Anthropic API key for Claude AI
 
 3. **Run development server**
 
