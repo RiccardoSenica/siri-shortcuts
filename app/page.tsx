@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <div className='container'>
         <div className='header'>
-          <h1>Siri Shortcuts v1.0.0</h1>
+          <h1>Siri Shortcuts v1.1.0</h1>
           <p>Anthropic-based power up for Siri Shortcuts</p>
         </div>
 
@@ -20,7 +20,7 @@ export default function Home() {
 
         <div className='status'>
           <span>Status: OPERATIONAL</span>
-          <span>Last Backup: 2024-01-18 14:30 UTC</span>
+          <span>Last Backup: 2025-10-11 10:00 UTC</span>
         </div>
       </div>
 
