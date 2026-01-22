@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'DiaryWhisper',
+  title: 'Siri Shortcuts',
   description: 'Siri-enabled diary tracker for expenses and day logs'
 };
 
